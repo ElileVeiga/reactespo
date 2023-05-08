@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        acessar pelo cmd a pasta onde sera crido o projeto:
+        ter instalado o expo:
+        no cmd dentro da pasta =\/
+        expo init (nome do aplicativo)
+        clicar na opção BLANK,
+        se aparecer  opção do YARN clicar em Y,
+        ai é so acessar a parta (nome do aplicativo) 
+        e dar um NPM START ou YARN START,
+        entrar na pasta pelo cmd CODE .,
+        para executar o expo no celular no cmd digitar EXPO START,
+        depois de aparecer o QR code significa que funcionou:
+
+        =====================================================
+
+        dentro da VScode 
+        criar uma pasta SRC
+        dentro dela oustras pastar PAGES e CONTENT:
+        PAGES:Criar uma pagina para cada nova aba do app,
+        CONTENT:criar objetos que serão usados em todas as paginas:
+        Dentro de SRC/PAGES criar uma pasta HOME (obs:copiar o arquivo app.js),
+        e o que esta dentro do RETURN em app.js:
+        em HOME importar os precisa do react ex:import { StatusBar } from 'expo-status-bar';
+        import { StyleSheet, Text, View,TextInput, TouchableOpacity, Button, SafeAreaView, Image} from 'react-native';
+        import Header from '../../Components/Header/index';
+        importar os componentes como o heder para o cabeçalho não ficar na side bar
+        HADER(
+import react from 'react'
+import {
+    View,
+    Text,
+    StyleSheet,
+    StatusBar
+}from 'react-native'
+
+const StatusBarHeigt = StatusBar.currentHeight ? StatusBar.currentHeight + 22 : 64;
+
+export default function Header(){
+    return(
+        View styles=^styles.container^
+    )
+}
+
+const styles = StyleSheet.create({
+    container:{
+        flex:1,
+        backgroundColor:'#000',
+        paddingTop:StatusBarHeigt,
+        zIndex:99,
+    }
+})
+        )
+
+    em APP fazer a importação da HOME
+    import Home from './src/pages/Homer'; ==========>fica somente o import da pagina 
+
+export default function App() {
+  return (
+    Home /> ===>a importação aqui
+  )
+};
+=====================================================
+navegação com react navigation
+fazer a intalação do react navigation pelo terminal do VCcode:
+
+npm i @react-navigation/native
+yarn add @react-navigation/native:
+
+depois disso baixar as bibliotecas necessarias pelo terminal do VCcode:
+
+expo install react-native-screens react-native-safe-area-context 
+
+
+    </p>
+</body>
+</html>
